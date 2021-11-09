@@ -1,0 +1,73 @@
+.input-primary {
+    text-transform: capitalize;
+    padding: 0 10px;
+    height: 35px;
+    background-color: transparent;
+    outline: none;
+    transition: all 0.15s linear;
+    width: 100%;
+    font-size: 0.8rem;
+    &:hover {
+        border-width: 2px;
+    }
+    &:focus {
+        border-width: 2px;
+    }
+    &--white {
+        border: 1px solid $color-white;
+        color: $color-white;
+    }
+    &--dark {
+        border: 1px solid $color-black;
+        color: $color-black;
+    }
+}
+
+.btn-primary {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    outline: none;
+    transition: all 0.15s linear;
+    width: 100%;
+    font-size: 0.8rem;
+    &--black {
+        border: 1px solid $color-black !important;
+        background-color: $color-white !important;
+        color: $color-black !important;
+
+        &:hover {
+            background-color: $color-gray-3 !important;
+            border: 2px solid $color-gray-3 !important;
+            color: $color-white !important;
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+            color: $color-black !important;
+            box-shadow: unset !important;
+        }
+    }
+    &--white {
+        border: 1px solid $color-white !important;
+        background-color: $color-black !important;
+        color: $color-white !important;
+
+        &:hover {
+            background-color: $color-gray-3 !important;
+            border: 2px solid $color-gray-3 !important;
+        }
+
+        &:focus {
+            outline: none;
+            color: $color-white !important;
+            box-shadow: unset !important;
+        }
+    }
+}
+.btn-disabled {
+    cursor: default !important;
+}

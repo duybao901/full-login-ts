@@ -1,0 +1,52 @@
+.search-form {
+    height: 40px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    &:hover {
+        border-bottom: 1px solid $color-black;
+    }
+    & i.ti.ti-search {
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+
+    & i.ti.ti-close {
+        font-size: .6rem;
+        cursor: pointer;
+    }
+    & input {
+        border: 0;
+        outline: 0;
+        width: 90%;
+        padding-right: 20px;
+        font-size: 1rem;
+        background-color: transparent;
+        font-weight: 300;
+        margin: 5px 0px;
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: $color-black;
+
+        &::-webkit-input-placeholder {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: $color-black;
+        }
+
+        &:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: $color-black;
+        }
+
+        &::placeholder {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: $color-black;
+        }
+    }
+}

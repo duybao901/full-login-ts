@@ -1,0 +1,76 @@
+.profile {
+    &__body {
+        display: flex;
+    }
+    &__infor {
+        width: 40%;
+        &-avatar {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            & img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    & .form__control {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        & label {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: $color-black;
+        }
+        & input {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid $color-black;
+            font-size: 0.9rem;
+            color: $color-black;
+            padding: 5px 0px;
+            overflow: hidden;
+            border-radius: 0px;
+            transition: all 0.1s linear;
+            &:focus {
+                border-bottom-width: 2px !important;
+            }
+        }
+        & button {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-gray-7;
+            border: none;
+            font-size: 0.8rem;
+            cursor: default;
+            width: 150px;
+            &.active:hover{
+                background-color: $color-gray-6;
+                border: 1px solid $color-gray-4;
+                cursor: pointer;
+            }
+           
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 100%;
+        background-color: $color-gray-7;
+        margin-bottom: 100px;
+        & h2 {
+            margin: 0;
+        }
+    }
+}
