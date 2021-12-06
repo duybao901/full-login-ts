@@ -31,15 +31,15 @@ class AuthController {
                 sendMail(account, url, `Dear ${name}`, "Verify your email address")
 
                 return res.json({
-                    msg: "Register successfully",
+                    msg: "Register successfully, Please check your email address",
                     user: newUser,
                     active_token: active_token
                 })
             } else if (validPhone(account)) {
-                sendSms(account, url, "Please check yout phone.")
+                sendSms(account, url, "Veryfy your phone.")
 
                 return res.json({
-                    msg: "Register successfully",
+                    msg: "Register successfully, Please check your phone",
                     data: newUser,
                     token: active_token
                 })
@@ -125,7 +125,6 @@ class AuthController {
 
             const verify = await client.verifyIdToken({
                 idToken: id_token,
-                audience: `${process.env.MAIL_CLIENT_ID}`
             })
 
             const {
@@ -154,6 +153,7 @@ class AuthController {
             }
 
         } catch (err: any) {
+            console.log(err)
             return res.status(500).json({ msg: err.message })
         }
     }
@@ -174,7 +174,7 @@ class AuthController {
             const { phone, code } = req.body;
 
             const data = await smsVefify(phone, code)
-            if (!data?.valid) return res.status(400).json({ msg: "Invalid Authentication."})
+            if (!data?.valid) return res.status(400).json({ msg: "Invalid Authentication." })
 
             const password = phone + 'your phone secrect password'
             const passwordHash = await bcrypt.hash(password, 12)
@@ -187,7 +187,7 @@ class AuthController {
                 const user = {
                     name: phone,
                     account: phone,
-                    password: passwordHash,                    
+                    password: passwordHash,
                     type: 'login'
                 }
                 registerUser(user, res)
@@ -214,7 +214,7 @@ const loginUser = async (user: IUser, password: string, res: Response) => {
     })
     return res.json({
         msg: "login success",
-        access_token, 
+        access_token,
         user
     })
 }

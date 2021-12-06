@@ -8,6 +8,7 @@ const SocialLogin = () => {
 
     const onSuccessGg = (googleUser: GoogleLoginResponse) => {
         const id_token = googleUser.getAuthResponse().id_token;
+        console.log(id_token)
         dispatch(loginGoogle(id_token))
     }
 

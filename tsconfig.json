@@ -1,4 +1,3 @@
-//! Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
