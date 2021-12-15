@@ -193,7 +193,6 @@ class AuthController {
                 registerUser(user, res)
             }
 
-
         } catch (err: any) {
             return res.status(500).json({ msg: err.meesage })
         }

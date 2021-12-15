@@ -5,6 +5,7 @@ export type InputChange = ChangeEvent<HTMLInputElement>
 export type FormSubmit = ChangeEvent<HTMLFormElement>
 
 export type RootStore = ReturnType<typeof rootReducer>
+
 export interface IParams {
     page: string
     slug: string
